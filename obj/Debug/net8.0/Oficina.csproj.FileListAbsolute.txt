@@ -1,0 +1,14 @@
+C:\Users\Ronaldo\Documents\Oficina\obj\Debug\net8.0\Oficina.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ronaldo\Documents\Oficina\obj\Debug\net8.0\Oficina.AssemblyInfoInputs.cache
+C:\Users\Ronaldo\Documents\Oficina\obj\Debug\net8.0\Oficina.AssemblyInfo.cs
+C:\Users\Ronaldo\Documents\Oficina\obj\Debug\net8.0\Oficina.csproj.CoreCompileInputs.cache
+C:\Users\Ronaldo\Documents\Oficina\bin\Debug\net8.0\Oficina.exe
+C:\Users\Ronaldo\Documents\Oficina\bin\Debug\net8.0\Oficina.deps.json
+C:\Users\Ronaldo\Documents\Oficina\bin\Debug\net8.0\Oficina.runtimeconfig.json
+C:\Users\Ronaldo\Documents\Oficina\bin\Debug\net8.0\Oficina.dll
+C:\Users\Ronaldo\Documents\Oficina\bin\Debug\net8.0\Oficina.pdb
+C:\Users\Ronaldo\Documents\Oficina\obj\Debug\net8.0\Oficina.dll
+C:\Users\Ronaldo\Documents\Oficina\obj\Debug\net8.0\refint\Oficina.dll
+C:\Users\Ronaldo\Documents\Oficina\obj\Debug\net8.0\Oficina.pdb
+C:\Users\Ronaldo\Documents\Oficina\obj\Debug\net8.0\Oficina.genruntimeconfig.cache
+C:\Users\Ronaldo\Documents\Oficina\obj\Debug\net8.0\ref\Oficina.dll

@@ -20,9 +20,10 @@ namespace Oficina
 
                 Console.WriteLine("[1] Novo Cadastro");
                 Console.WriteLine("[2] Editar Cadastro");
-                Console.WriteLine("[3] Pesquisar");
-                Console.WriteLine("[4] Adicionar Serviço");
-                Console.WriteLine("[5] Listar");
+                Console.WriteLine("[3] Remover Cadastro");
+                Console.WriteLine("[4] Pesquisar");
+                Console.WriteLine("[5] Adicionar Serviço");
+                Console.WriteLine("[6] Listar");
                 Console.WriteLine("[0] Sair");
                 Console.Write("Selecione uma das opções: \n");
                 var escolha = Console.ReadLine();
@@ -49,10 +50,21 @@ namespace Oficina
                     case "2":
                         Console.Write("Placa do cadastro a ser atualizado: ");
                         string y = Console.ReadLine()!;
-                        Executar.Pesquisar(y);
-                        break;
+                        Veiculo veiculoEncontrado = Executar.Pesquisar(y);
 
+                        if (veiculoEncontrado != null)
+                        {
+                            // Aqui você pode atualizar os dados do veículo
+                            Console.Write("Nova Placa: ");
+                            veiculoEncontrado.Placa = Console.ReadLine()!;
+
+
+                            Console.WriteLine("Veículo atualizado com sucesso!");
+                        }
+                        break;
                     case "3":
+                        break;
+                    case "4":
                         Console.Clear();
                         Console.WriteLine("=== Pesquisa de Carros ===\n");
 
@@ -64,10 +76,12 @@ namespace Oficina
                         Console.ReadKey();
                         break;
 
-                    case "4":
-                        break;
+
 
                     case "5":
+                        break;
+
+                    case "6":
                         Executar.Listar();
                         break;
 

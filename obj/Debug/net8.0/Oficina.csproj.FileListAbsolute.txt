@@ -12,3 +12,4 @@ C:\Users\Ronaldo\Documents\Oficina\obj\Debug\net8.0\refint\Oficina.dll
 C:\Users\Ronaldo\Documents\Oficina\obj\Debug\net8.0\Oficina.pdb
 C:\Users\Ronaldo\Documents\Oficina\obj\Debug\net8.0\Oficina.genruntimeconfig.cache
 C:\Users\Ronaldo\Documents\Oficina\obj\Debug\net8.0\ref\Oficina.dll
+C:\Users\Ronaldo\Documents\Oficina\obj\Debug\net8.0\Oficina.sourcelink.json

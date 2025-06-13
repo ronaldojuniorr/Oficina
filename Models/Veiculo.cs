@@ -4,17 +4,17 @@ namespace Oficina.Models
 {
     public class Veiculo
     {
-        private string Placa { get; set; }
-        private string Modelo { get; set; }
-        private string Cor { get; set; }
-        private string Proprietario { get; set; }
+        public string Placa { get; private set; }
+        public string Modelo { get; private set; }
+        public string Cor { get; private set; }
+        public string Proprietario { get; private set; }
 
 
         public Veiculo (string a, string b, string c, string d)
         {
-            Modelo = a;
-            Cor = b;
-            Placa = c;
+            Placa = a;
+            Modelo = b;
+            Cor = c;
             Proprietario = d;
         }
 

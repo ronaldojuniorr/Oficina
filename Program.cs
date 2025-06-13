@@ -7,15 +7,15 @@ namespace Oficina
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Bem-Vindo ao Cadastro da Oficina!\n");
-            Console.WriteLine("-------------------------------------");
 
-            List<Veiculo> veiculos = new List<Veiculo>();
+
+
             bool exec = true;
 
             while (exec)
             {
-                Console.Clear();
+                Console.WriteLine("\nBem-Vindo ao Cadastro da Oficina!");
+                Console.WriteLine("-------------------------------------\n");
                 Console.WriteLine("===Oficina de Carros===\n");
 
                 Console.WriteLine("[1] Novo Cadastro");
@@ -30,7 +30,7 @@ namespace Oficina
                 {
                     case "1":
                         Console.Clear();
-                        Console.WriteLine("===Oficina de Carros===\n");
+                        Console.WriteLine("=== Cadastro de Carros ===\n");
 
                         Console.Write("Placa: ");
                         string placa = Console.ReadLine()!;
@@ -41,13 +41,27 @@ namespace Oficina
                         Console.Write("Proprietário: ");
                         string propr = Console.ReadLine()!;
 
-                        veiculos.Add(new Veiculo(placa, modelo, cor, propr));
+                        Executar.veiculos.Add(new Veiculo(placa, modelo, cor, propr));
                         break;
 
                     case "2":
+                        Console.Clear();
+                        Console.WriteLine("=== Pesquisa de Carros ===\n");
+
+                        Console.Write("Placa a ser pesquisada: ");
+                        string x = Console.ReadLine()!;
+                        Executar.Pesquisar(x);
+
+                        Console.WriteLine("\nPesquisa realizada. Pressione qualquer tecla para continuar...");
+                        Console.ReadKey();
                         break;
 
                     case "3":
+                        break;
+                    case "4":
+                        break;
+                    case "0":
+                        exec = false;
                         break;
                 }
 

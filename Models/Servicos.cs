@@ -2,6 +2,10 @@
 
 namespace Oficina.Models
 {
+    public class IdServico
+    {
+
+    }
     public class ServicosFeitos
     {
         private int IdServico;
@@ -15,6 +19,10 @@ namespace Oficina.Models
             data = b;
             Responsavel = c;
             Diagnostico = d;
+        }
+        public void EscreveServiços()
+        {
+
         }
     }
 }

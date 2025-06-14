@@ -14,12 +14,12 @@ namespace Oficina.Models
             {
                 Console.WriteLine($"\nVeículo encontrado: {encontrado.Modelo} | {encontrado.Placa}");
                 Console.WriteLine($"Cor: {encontrado.Cor}, Proprietário: {encontrado.Proprietario}");
+                Console.WriteLine($"Serviço: {encontrado.ServicosF}");
                 return encontrado;
             }
             else
             {
-                Console.WriteLine($"\nA {placa} não está na lista de carros da oficina!");
-                return null;
+                return null; // Arrumar o null
             }
         }
         public static void Listar()

@@ -12,6 +12,7 @@ namespace Oficina
             Console.WriteLine("-------------------------------------\n");
 
             bool exec = true;
+            bool execEdit = true;
 
             while (exec)
             {
@@ -48,22 +49,26 @@ namespace Oficina
                         break;
 
                     case "2":
+                        Console.Clear();
+                        Console.WriteLine("=== Editar Cadastro ===\n");
+
                         Console.Write("Placa do cadastro a ser atualizado: ");
                         string y = Console.ReadLine()!;
                         Veiculo veiculoEncontrado = Executar.Pesquisar(y);
 
                         if (veiculoEncontrado != null)
                         {
-                            // Aqui você pode atualizar os dados do veículo
-                            Console.Write("Nova Placa: ");
-                            veiculoEncontrado.Placa = Console.ReadLine()!;
-
-
-                            Console.WriteLine("Veículo atualizado com sucesso!");
+                            //Serviços e outros
+                        }
+                        else
+                        {
+                            Console.WriteLine($"\nA {y} não está na lista de carros da oficina!");
                         }
                         break;
+
                     case "3":
                         break;
+
                     case "4":
                         Console.Clear();
                         Console.WriteLine("=== Pesquisa de Carros ===\n");
@@ -79,6 +84,32 @@ namespace Oficina
 
 
                     case "5":
+                        Console.Clear();
+                        Console.WriteLine("=== Adicionar Serviço ===\n");
+                        Console.Write("Placa do carro em que o serviço foi feito: ");
+                        string z = Console.ReadLine()!;
+                        Veiculo veiculoz = Executar.Pesquisar(z);
+
+                        if (veiculoz != null)
+                        {
+                            Console.Write("ID do serviço: ");
+                            int id = int.Parse(Console.ReadLine()!);
+
+                            Console.Write("Data (dd/mm/aaaa): ");
+                            DateTime data = DateTime.Parse(Console.ReadLine()!);
+
+                            Console.Write("Responsável: ");
+                            string resp = Console.ReadLine()!;
+
+                            Console.Write("Diagnóstico: ");
+                            string diag = Console.ReadLine()!;
+
+                            ServicosFeitos novoServico = new ServicosFeitos(id, data, resp, diag);
+
+                            veiculoz.ServicosF = novoServico;
+
+                            Console.WriteLine("Serviço adicionado com sucesso!");
+                        }
                         break;
 
                     case "6":

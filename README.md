@@ -24,9 +24,3 @@ O sistema permite:
 - `Models/Veiculo.cs`: Representa os dados do veículo.
 - `Models/ServicosFeitos.cs`: Representa os serviços realizados em um veículo.
 - `Models/Executar.cs`: Contém a lista de veículos e os métodos para manipulação (pesquisar, listar, etc).
-
-## 🧪 Como Executar
-
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/cadastro-oficina-aed.git

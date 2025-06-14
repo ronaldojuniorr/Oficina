@@ -2,27 +2,23 @@
 
 namespace Oficina.Models
 {
-    public class IdServico
-    {
-
-    }
     public class ServicosFeitos
     {
-        private int IdServico;
-        private DateTime data { get; set; } = DateTime.Now;
-        private string Responsavel;
-        private string Diagnostico;
+        public string TipoServiço;
+        public DateTime data { get; set; } = DateTime.Now;
+        public string Responsavel;
+        public string Diagnostico;
 
-        public ServicosFeitos(int a, DateTime b, string c, string d)
+        public ServicosFeitos(string a, DateTime b, string c, string d)
         {
-            IdServico = a;
+            TipoServiço = a;
             data = b;
             Responsavel = c;
             Diagnostico = d;
         }
-        public void EscreveServiços()
+        public override string ToString()
         {
-
+            return $"\nUltimo Serviço feito:\n{TipoServiço}, Data: {data:dd/MM/yyyy}, Responsável: {Responsavel}, Diagnóstico: {Diagnostico}";
         }
     }
 }

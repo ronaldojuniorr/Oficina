@@ -93,7 +93,7 @@ namespace Oficina
                         if (veiculoz != null)
                         {
                             Console.Write("ID do serviço: ");
-                            int id = int.Parse(Console.ReadLine()!);
+                            string tipo = (Console.ReadLine()!);
 
                             Console.Write("Data (dd/mm/aaaa): ");
                             DateTime data = DateTime.Parse(Console.ReadLine()!);
@@ -104,7 +104,7 @@ namespace Oficina
                             Console.Write("Diagnóstico: ");
                             string diag = Console.ReadLine()!;
 
-                            ServicosFeitos novoServico = new ServicosFeitos(id, data, resp, diag);
+                            ServicosFeitos novoServico = new ServicosFeitos(tipo, data, resp, diag);
 
                             veiculoz.ServicosF = novoServico;
 

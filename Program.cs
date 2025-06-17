@@ -219,7 +219,7 @@ namespace Oficina
 
                     case "0":
                         Console.Clear();
-                        Console.WriteLine("Obrigado por utilizar o Cadastro da Oficina!\n");
+                        Console.WriteLine("=== Obrigado por utilizar o Cadastro da Oficina! ===\n");
                         exec = false;
                         break;
 

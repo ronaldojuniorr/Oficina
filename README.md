@@ -9,6 +9,7 @@ O sistema permite:
 - [x] Cadastro de veículos (placa, modelo, cor, proprietário)
 - [x] Edição de cadastros existentes
 - [x] Pesquisa por placa
+- [x] Remoção de cadastros
 - [x] Registro de serviços realizados
 - [x] Listagem de todos os veículos cadastrados
 

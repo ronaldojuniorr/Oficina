@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Matheus\\Desktop\\AED\\Oficina\\Oficina.csproj": {}
+    "C:\\Users\\Matheus\\Desktop\\AED\\oficina\\Oficina.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Matheus\\Desktop\\AED\\Oficina\\Oficina.csproj": {
+    "C:\\Users\\Matheus\\Desktop\\AED\\oficina\\Oficina.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Matheus\\Desktop\\AED\\Oficina\\Oficina.csproj",
+        "projectUniqueName": "C:\\Users\\Matheus\\Desktop\\AED\\oficina\\Oficina.csproj",
         "projectName": "Oficina",
-        "projectPath": "C:\\Users\\Matheus\\Desktop\\AED\\Oficina\\Oficina.csproj",
+        "projectPath": "C:\\Users\\Matheus\\Desktop\\AED\\oficina\\Oficina.csproj",
         "packagesPath": "C:\\Users\\Matheus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Matheus\\Desktop\\AED\\Oficina\\obj\\",
+        "outputPath": "C:\\Users\\Matheus\\Desktop\\AED\\oficina\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Matheus\\AppData\\Roaming\\NuGet\\NuGet.Config"

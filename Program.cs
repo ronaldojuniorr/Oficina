@@ -127,13 +127,13 @@ namespace Oficina
                         Console.WriteLine("=== Remover Cadastro ===\n");
 
                         Console.Write("Placa do cadastro a ser removido: ");
-                        string a = Console.ReadLine()!;
+                        string placaRemover = Console.ReadLine()!;
 
-                        Veiculo Rveiculo = Executar.Pesquisar(a);
+                        Veiculo veiculoParaRemover = Executar.Pesquisar(placaRemover);
 
-                        if (Rveiculo != null)
+                        if (veiculoParaRemover != null)
                         {
-                            Console.WriteLine($"\nVeículo com a placa {a} encontrado.");
+                            Console.WriteLine($"\nVeículo com a placa {placaRemover} encontrado.");
                             Console.WriteLine("Pressione ENTER para confirmar a remoção.");
                             Console.WriteLine("Ou pressione ESC para cancelar.");
 
@@ -141,7 +141,7 @@ namespace Oficina
 
                             if (tecla.Key == ConsoleKey.Enter)
                             {
-                                Executar.veiculos.Remove(Rveiculo);
+                                Executar.veiculos.Remove(veiculoParaRemover);
                                 Console.WriteLine("\nVeículo removido com sucesso!");
                             }
                             else if (tecla.Key == ConsoleKey.Escape)
@@ -155,7 +155,7 @@ namespace Oficina
                         }
                         else
                         {
-                            Console.WriteLine($"\nA Placa {a} não está na lista de carros da oficina!\n");
+                            Console.WriteLine($"\nA Placa {placaRemover} não está na lista de carros da oficina!\n");
                         }
 
                         Console.WriteLine("\nPressione qualquer tecla para continuar...");

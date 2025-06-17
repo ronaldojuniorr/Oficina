@@ -58,15 +58,109 @@ namespace Oficina
 
                         if (veiculoEncontrado != null)
                         {
-                            //Serviços e outros
+                            execEdit = true;
+                            while (execEdit)
+                            {
+                                Console.Clear();
+                                Console.WriteLine("=== Editar Veículo ===");
+                                Console.WriteLine($"[1] Placa: {veiculoEncontrado.Placa}");
+                                Console.WriteLine($"[2] Modelo: {veiculoEncontrado.Modelo}");
+                                Console.WriteLine($"[3] Cor: {veiculoEncontrado.Cor}");
+                                Console.WriteLine($"[4] Proprietário: {veiculoEncontrado.Proprietario}");
+                                Console.WriteLine("[0] Voltar");
+                                Console.Write("\nEscolha o que deseja editar: ");
+                                string opcaoEditar = Console.ReadLine()!;
+
+                                switch (opcaoEditar)
+                                {
+                                    case "1":
+                                        Console.Write("Nova placa: ");
+                                        veiculoEncontrado.Placa = Console.ReadLine()!;
+                                        Console.WriteLine("Placa atualizada com sucesso!");
+                                        break;
+
+                                    case "2":
+                                        Console.Write("Novo modelo: ");
+                                        veiculoEncontrado.Modelo = Console.ReadLine()!;
+                                        Console.WriteLine("Modelo atualizado com sucesso!");
+                                        break;
+
+                                    case "3":
+                                        Console.Write("Nova cor: ");
+                                        veiculoEncontrado.Cor = Console.ReadLine()!;
+                                        Console.WriteLine("Cor atualizada com sucesso!");
+                                        break;
+
+                                    case "4":
+                                        Console.Write("Novo proprietário: ");
+                                        veiculoEncontrado.Proprietario = Console.ReadLine()!;
+                                        Console.WriteLine("Proprietário atualizado com sucesso!");
+                                        break;
+
+                                    case "0":
+                                        execEdit = false;
+                                        Console.WriteLine("Saindo da edição...");
+                                        Console.Clear();
+                                        break;
+
+                                    default:
+                                        Console.WriteLine("Opção inválida.");
+                                        break;
+                                }
+
+                                if (execEdit)
+                                {
+                                    Console.WriteLine("\nPressione qualquer tecla para continuar...");
+                                    Console.ReadKey();
+
+                                }
+                            }
                         }
                         else
                         {
-                            Console.WriteLine($"\nA {y} não está na lista de carros da oficina!");
+                            Console.WriteLine($"\nA Placa {y} não está na lista de carros da oficina!\n");
                         }
                         break;
 
                     case "3":
+                        Console.Clear();
+                        Console.WriteLine("=== Remover Cadastro ===\n");
+
+                        Console.Write("Placa do cadastro a ser removido: ");
+                        string a = Console.ReadLine()!;
+
+                        Veiculo Rveiculo = Executar.Pesquisar(a);
+
+                        if (Rveiculo != null)
+                        {
+                            Console.WriteLine($"\nVeículo com a placa {a} encontrado.");
+                            Console.WriteLine("Pressione ENTER para confirmar a remoção.");
+                            Console.WriteLine("Ou pressione ESC para cancelar.");
+
+                            ConsoleKeyInfo tecla = Console.ReadKey(true); // true: não exibe a tecla
+
+                            if (tecla.Key == ConsoleKey.Enter)
+                            {
+                                Executar.veiculos.Remove(Rveiculo);
+                                Console.WriteLine("\nVeículo removido com sucesso!");
+                            }
+                            else if (tecla.Key == ConsoleKey.Escape)
+                            {
+                                Console.WriteLine("\nRemoção cancelada.");
+                            }
+                            else
+                            {
+                                Console.WriteLine("\nTecla inválida. Remoção cancelada.");
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine($"\nA Placa {a} não está na lista de carros da oficina!\n");
+                        }
+
+                        Console.WriteLine("\nPressione qualquer tecla para continuar...");
+                        Console.ReadKey();
+                        Console.Clear();
                         break;
 
                     case "4":
@@ -92,7 +186,7 @@ namespace Oficina
 
                         if (veiculoz != null)
                         {
-                            Console.Write("ID do serviço: ");
+                            Console.Write("Qual serviço foi feito? ");
                             string tipo = (Console.ReadLine()!);
 
                             Console.Write("Data (dd/mm/aaaa): ");
@@ -108,16 +202,29 @@ namespace Oficina
 
                             veiculoz.ServicosF = novoServico;
 
-                            Console.WriteLine("Serviço adicionado com sucesso!");
+                            Console.WriteLine("\nServiço adicionado com sucesso!\n");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"\nA Placa {z} não está na lista de carros da oficina!\n");
                         }
                         break;
 
                     case "6":
+                        Console.Clear();
+                        Console.WriteLine("=== Listar Cadastros ===\n");
                         Executar.Listar();
+                        Console.WriteLine("========================\n");
                         break;
 
                     case "0":
+                        Console.Clear();
+                        Console.WriteLine("Obrigado por utilizar o Cadastro da Oficina!\n");
                         exec = false;
+                        break;
+
+                    default:
+                        Console.WriteLine("Opção inválida.");
                         break;
                 }
 

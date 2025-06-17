@@ -17,7 +17,7 @@ namespace Oficina.Models
 
                 if (encontrado.ServicosF != null)
                 {
-                    Console.WriteLine("Serviço: " + encontrado.ServicosF.ToString());
+                    Console.WriteLine(encontrado.ServicosF.ToString());
                 }
                 else
                 {
@@ -35,7 +35,16 @@ namespace Oficina.Models
         {
             foreach (var veiculo in veiculos)
             {
-                Console.WriteLine($"{veiculo.Modelo} {veiculo.Placa} {veiculo.Cor} {veiculo.Proprietario} {veiculo.ServicosF.ToString()}");
+                Console.Write($"{veiculo.Placa} |  {veiculo.Modelo} \nCor: {veiculo.Cor} \nProprietário: {veiculo.Proprietario}\n");
+
+                if (veiculo.ServicosF != null)
+                {
+                    Console.WriteLine(veiculo.ServicosF.ToString());
+                }
+                else
+                {
+                    Console.WriteLine("Nenhum serviço registrado para este veículo.\n");
+                }
             }
         }
     }

@@ -8,7 +8,6 @@ O sistema permite:
 
 - [x] Cadastro de veículos (placa, modelo, cor, proprietário)
 - [x] Edição de cadastros existentes
-- [x] Remoção de cadastros (em desenvolvimento)
 - [x] Pesquisa por placa
 - [x] Registro de serviços realizados
 - [x] Listagem de todos os veículos cadastrados
@@ -24,3 +23,10 @@ O sistema permite:
 - `Models/Veiculo.cs`: Representa os dados do veículo.
 - `Models/ServicosFeitos.cs`: Representa os serviços realizados em um veículo.
 - `Models/Executar.cs`: Contém a lista de veículos e os métodos para manipulação (pesquisar, listar, etc).
+
+## 👥 Colaboradores
+
+- Ronaldo Soares de Oliveira Junior
+- Matheus Amaral Lara
+- Diogo Lamera dos Santos
+- Gabriel Xavier de Souza

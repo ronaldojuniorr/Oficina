@@ -13,7 +13,8 @@ namespace Oficina.Models
 
         public static void LerXml()
         {
-            string caminho = "veiculos.xml";
+            Console.Write("Informe o caminho do arquivo XML: ");
+            string caminho = Console.ReadLine()!;
 
             if (File.Exists(caminho))
             {

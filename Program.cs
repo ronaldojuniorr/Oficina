@@ -11,7 +11,7 @@ namespace Oficina
             Console.WriteLine("\nBem-Vindo ao Cadastro da Oficina!");
             Console.WriteLine("-------------------------------------\n");
 
-            Executar.LerXml();
+            Executar.LerXml();              //Ler Arquivo XML colocando o caminho do arquivo 
 
             bool exec = true;
             bool execEdit = true;
@@ -24,7 +24,7 @@ namespace Oficina
                 Console.WriteLine("[1] Novo Cadastro");
                 Console.WriteLine("[2] Editar Cadastro");
                 Console.WriteLine("[3] Remover Cadastro");
-                Console.WriteLine("[4] Pesquisar");
+                Console.WriteLine("[4] Pesquisar");                 //Menu de Escolha Utilizando Switch
                 Console.WriteLine("[5] Adicionar Serviço");
                 Console.WriteLine("[6] Listar");
                 Console.WriteLine("[0] Sair");
@@ -41,7 +41,7 @@ namespace Oficina
                         string placa = Console.ReadLine()!;
                         Console.Write("Modelo: ");
                         string modelo = Console.ReadLine()!;
-                        Console.Write("Cor: ");
+                        Console.Write("Cor: ");                                     //Cadastro de Carros
                         string cor = Console.ReadLine()!;
                         Console.Write("Proprietário: ");
                         string propr = Console.ReadLine()!;
@@ -54,7 +54,7 @@ namespace Oficina
                         Console.Clear();
                         Console.WriteLine("=== Editar Cadastro ===\n");
 
-                        Console.Write("Placa do cadastro a ser atualizado: ");
+                        Console.Write("Placa do cadastro a ser atualizado: ");              //Editar Cadastro já feito
                         string y = Console.ReadLine()!;
                         Veiculo veiculoEncontrado = Executar.Pesquisar(y);
 
@@ -89,7 +89,7 @@ namespace Oficina
 
                                     case "3":
                                         Console.Write("Nova cor: ");
-                                        veiculoEncontrado.Cor = Console.ReadLine()!;
+                                        veiculoEncontrado.Cor = Console.ReadLine()!;                             //Escolha de qual objeto do cadastro Editar
                                         Console.WriteLine("Cor atualizada com sucesso!");
                                         break;
 
@@ -139,12 +139,12 @@ namespace Oficina
                             Console.WriteLine("Pressione ENTER para confirmar a remoção.");
                             Console.WriteLine("Ou pressione ESC para cancelar.");
 
-                            ConsoleKeyInfo tecla = Console.ReadKey(true); // true: não exibe a tecla
+                            ConsoleKeyInfo tecla = Console.ReadKey(true);
 
                             if (tecla.Key == ConsoleKey.Enter)
                             {
                                 Executar.veiculos.Remove(veiculoParaRemover);
-                                Console.WriteLine("\nVeículo removido com sucesso!");
+                                Console.WriteLine("\nVeículo removido com sucesso!");                                  //Remover Cadastro
                             }
                             else if (tecla.Key == ConsoleKey.Escape)
                             {
@@ -170,7 +170,7 @@ namespace Oficina
                         Console.WriteLine("=== Pesquisa de Carros ===\n");
 
                         Console.Write("Placa a ser pesquisada: ");
-                        string x = Console.ReadLine()!;
+                        string x = Console.ReadLine()!;                                                     //Pesquisa para nostrar o cadastro
                         Executar.Pesquisar(x);
 
                         Console.WriteLine("\nPesquisa realizada. Pressione qualquer tecla para continuar...\n");
@@ -195,7 +195,7 @@ namespace Oficina
                             DateTime data = DateTime.Parse(Console.ReadLine()!);
 
                             Console.Write("Responsável: ");
-                            string resp = Console.ReadLine()!;
+                            string resp = Console.ReadLine()!;                                               //Adicionar o último Serviço realizado no carro cadastrado
 
                             Console.Write("Diagnóstico: ");
                             string diag = Console.ReadLine()!;
@@ -214,20 +214,20 @@ namespace Oficina
 
                     case "6":
                         Console.Clear();
-                        Console.WriteLine("=== Listar Cadastros ===\n");
+                        Console.WriteLine("=== Listar Cadastros ===\n");                            //Listagem de Cadastros
                         Executar.Listar();
                         Console.WriteLine("========================\n");
                         break;
 
                     case "0":
                         Console.Clear();
-                        Console.WriteLine("=== Obrigado por utilizar o Cadastro da Oficina! ===\n");
+                        Console.WriteLine("=== Obrigado por utilizar o Cadastro da Oficina! ===\n");                //Saída e salvo em Arquivo XML
                         Executar.SalvarXml();
                         exec = false;
                         break;
 
                     default:
-                        Console.WriteLine("Opção inválida.");
+                        Console.WriteLine("Opção inválida.");      // Caso Haja uma Opção Inválida
                         break;
                 }
 

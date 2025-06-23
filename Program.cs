@@ -11,6 +11,8 @@ namespace Oficina
             Console.WriteLine("\nBem-Vindo ao Cadastro da Oficina!");
             Console.WriteLine("-------------------------------------\n");
 
+            Executar.LerXml();
+
             bool exec = true;
             bool execEdit = true;
 
@@ -220,6 +222,7 @@ namespace Oficina
                     case "0":
                         Console.Clear();
                         Console.WriteLine("=== Obrigado por utilizar o Cadastro da Oficina! ===\n");
+                        Executar.SalvarXml();
                         exec = false;
                         break;
 

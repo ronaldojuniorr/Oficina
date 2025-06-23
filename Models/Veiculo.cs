@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Xml.Serialization;
 
 namespace Oficina.Models
 {
+    [Serializable]
     public class Veiculo
     {
         public string Placa { get; set; }
@@ -10,6 +12,7 @@ namespace Oficina.Models
         public string Proprietario { get; set; }
         public ServicosFeitos ServicosF { get; set; }
 
+        public Veiculo() { }
 
         public Veiculo(string a, string b, string c, string d)
         {

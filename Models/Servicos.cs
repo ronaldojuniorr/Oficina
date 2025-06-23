@@ -1,13 +1,17 @@
 ﻿using System;
+using System.Xml.Serialization;
 
 namespace Oficina.Models
 {
+    [Serializable]
     public class ServicosFeitos
     {
-        public string TipoServiço;
+        public string TipoServiço { get; set; }
         public DateTime data { get; set; } = DateTime.Now;
-        public string Responsavel;
-        public string Diagnostico;
+        public string Responsavel { get; set; }
+        public string Diagnostico { get; set; }
+
+        public ServicosFeitos() { }
 
         public ServicosFeitos(string a, DateTime b, string c, string d)
         {

@@ -1,10 +1,49 @@
 using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Xml.Serialization;
+using Oficina.Models;
 
 namespace Oficina.Models
 {
     public class Executar
     {
         public static List<Veiculo> veiculos = new List<Veiculo>();
+
+        public static void LerXml()
+        {
+            string caminho = "veiculos.xml";
+
+            if (File.Exists(caminho))
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(List<Veiculo>));
+
+                using (FileStream fs = new FileStream(caminho, FileMode.Open))
+                {
+                    veiculos = (List<Veiculo>)serializer.Deserialize(fs);
+                }
+
+                Console.WriteLine($"[INFO] {veiculos.Count} veículos carregados do XML.\n");
+            }
+            else
+            {
+                Console.WriteLine("[INFO] Arquivo XML não encontrado. Lista iniciada vazia.\n");
+            }
+        }
+
+        public static void SalvarXml()
+        {
+            string caminho = "veiculos.xml";
+
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Veiculo>));
+            using (FileStream fs = new FileStream(caminho, FileMode.Create))
+            {
+                serializer.Serialize(fs, veiculos);
+            }
+
+            Console.WriteLine("[INFO] Dados salvos no arquivo XML.");
+        }
 
         public static Veiculo Pesquisar(string placa)
         {

@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Matheus\\.nuget\\packages\\": {}
+    "C:\\Users\\Ronaldo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Matheus\\Desktop\\AED\\Oficina\\Oficina.csproj",
+      "projectUniqueName": "C:\\Users\\Ronaldo\\Documents\\Oficina\\Oficina.csproj",
       "projectName": "Oficina",
-      "projectPath": "C:\\Users\\Matheus\\Desktop\\AED\\Oficina\\Oficina.csproj",
-      "packagesPath": "C:\\Users\\Matheus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Matheus\\Desktop\\AED\\Oficina\\obj\\",
+      "projectPath": "C:\\Users\\Ronaldo\\Documents\\Oficina\\Oficina.csproj",
+      "packagesPath": "C:\\Users\\Ronaldo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ronaldo\\Documents\\Oficina\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Matheus\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Ronaldo\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -64,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.411/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.301/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

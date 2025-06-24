@@ -22,7 +22,7 @@ namespace Oficina.Models
         }
         public override string ToString()
         {
-            return $"\nUltimo Serviço feito:\n{TipoServiço}, Data: {data:dd/MM/yyyy}, Responsável: {Responsavel}, Diagnóstico: {Diagnostico}";
+            return $"\nUltimo Serviço feito:\n{TipoServiço}, Data: {data:dd/MM/yyyy}, Responsável: {Responsavel}, Diagnóstico: {Diagnostico}\n";
         }
     }
 }

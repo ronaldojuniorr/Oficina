@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfVeiculo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Veiculo>
+    <Placa>ABC1234</Placa>
+    <Modelo>Ferrari</Modelo>
+    <Cor>Branca</Cor>
+    <Proprietario>Xavier</Proprietario>
+    <ServicosF>
+      <TipoServiço>Troca de bateria</TipoServiço>
+      <data>2025-06-24T00:00:00</data>
+      <Responsavel>Gabriel</Responsavel>
+      <Diagnostico>Troca realizada com sucesso</Diagnostico>
+    </ServicosF>
+  </Veiculo>
+</ArrayOfVeiculo>
